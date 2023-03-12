@@ -41,7 +41,7 @@ letter-spacing: .3rem;
 }
 .wrapper{ 
   padding: 40px 90px;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   display: grid;
   grid-template-columns: repeat(3,1fr);
  /* gap: 20px 30px; */
@@ -49,6 +49,7 @@ letter-spacing: .3rem;
 
 }
 .card{
+  position: relative;
   justify-self:center;
   width: 95%;
   /* height: 70vh; */
@@ -79,6 +80,18 @@ letter-spacing: .3rem;
   font-Weight:500;
 }
 
+#price{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-500);
+  width: 90px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: .2rem;
+}
 
 
 @media screen and (max-width:900px) {
@@ -92,6 +105,11 @@ letter-spacing: .3rem;
   #tourName{
     font-size: 1.2rem;
   }
+}
+
+#info{
+color:rgba(1, 33, 13, 0.563) ;
+/* text-align: center; */
 }
 
 
