@@ -129,6 +129,14 @@ color:rgba(1, 33, 13, 0.563) ;
   color: white;
 }
 
+#refreshBtn{
+  background-color: var(--primary-900);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 
 @media screen and (max-width:650px) {
   
