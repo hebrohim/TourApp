@@ -1,7 +1,9 @@
 import React ,{useState} from 'react'
 
-const Tour = ({tour}) => {
+const Tour = ({tour,deleteTours}) => {
+    
     let { id, name, info, image, price } = tour;
+   
     const [readMore, setreadMore] = useState(true)
 
   return (
@@ -15,7 +17,8 @@ const Tour = ({tour}) => {
                 <b>{name}</b>
               </h4>
               <span id="info">{readMore?info:`${info.substring(0,270)}`}</span>
-              <p onClick={()=>{setreadMore(!readMore)}} style={{color:"#10b981"}}>{readMore? "Read less ...": "Read more ..."}</p> 
+              <p onClick={()=>{setreadMore(!readMore)}} style={{color:"#10b981",cursor:"pointer"}}>{readMore? "Read less ...": "Read more ..."}</p> 
+           <button id='notIntrestedBtn' onClick={()=>deleteTours(id)}>Not intrested</button>
             </div>
           </div>
   )
