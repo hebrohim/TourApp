@@ -1,24 +1,17 @@
-import React from "react";
+import React,{useState}from "react";
+import Tour from "./Tour";
+
+
 const ListTours = ({ Tours }) => {
+    
+
   return (
     <div className="wrapper">
       {Tours.map((tour) => {
-        let { id, name, info, image, price } = tour;
+        
+      return <Tour tour = {tour} key = {tour.id}/>
         // console.log(name)
-        return (
-                    
-          <div key={id} className="card">
-   
-            <img src={image} alt="name" id="tourImage" />
-            <span id="price">${price}</span>
-            <div className="container">
-              <h4 id="tourName">
-                <b>{name}</b>
-              </h4>
-              <p id="info">{info}</p> 
-            </div>
-          </div>
-        );
+       
       })}
     </div>
   );

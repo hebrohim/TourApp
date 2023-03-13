@@ -11,8 +11,8 @@ function App() {
   useEffect(() => {
     setLoading(true)
     axios.get(baseURL).then((response) => {
-      setLoading(false)
       setTours(response.data);
+      setLoading(false)
     });
   }, []);
 
